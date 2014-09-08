@@ -11,7 +11,7 @@
             <td><%= image_tag(product.image_url, class: "index-product-image") %></td>
         </div>
         <div class="small-8 columns">
-            <td class="list-description"><%= product.title %><br />
+            <td class="list-description"><div class="product-title"><%= product.title %>M</div><br />
             <%= truncate(strip_tags(product.description), length: 80) %></td>
         </div>
         <div class="small-1 columns">

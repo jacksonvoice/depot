@@ -24,6 +24,12 @@
  	float: right
  }*/
 
+.product-title {
+	font-weight: bold;
+	color: darkorange;
+	font-size: 1.2em;
+}
+
  .list-description {
  	width: 60%;
  }
