@@ -7,11 +7,11 @@
 <table>
 	<tbody>
 		<% @products.each do |product| %>
-			<tr>
+			<tr class="store-index-list">
 				<td><%= image_tag("#{product.image_url}") %></td>
 				<td><h3><%= product.title %></h3><br / >
 				<%= sanitize(product.description) %></td>
-				<td><%= product.price %></td>
+				<td class='price'><%= number_to_currency(product.price) %></td>
 			</tr>
 		<% end %>
 	</tbody>
