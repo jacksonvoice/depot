@@ -6,13 +6,17 @@
 
 <table>
 	<tbody>
+		<% cache ['store', Product.latest] do %>
 		<% @products.each do |product| %>
+		<% cache ['entry', product] do %>
 			<tr class="store-index-list">
 				<td><%= image_tag("#{product.image_url}") %></td>
 				<td><h3><%= product.title %></h3><br / >
 				<%= sanitize(product.description) %></td>
 				<td class='price'><%= number_to_currency(product.price) %></td>
 			</tr>
+		<% end %>
+		<% end %>
 		<% end %>
 	</tbody>
 </table>
