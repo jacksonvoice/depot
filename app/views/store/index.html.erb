@@ -14,6 +14,7 @@
 				<td><h3><%= product.title %></h3><br / >
 				<%= sanitize(product.description) %></td>
 				<td class='price'><%= number_to_currency(product.price) %></td>
+				<td><%= button_to 'Add to Cart', line_items_path(product_id: product) %></td>
 			</tr>
 		<% end %>
 		<% end %>
